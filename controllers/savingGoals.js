@@ -16,7 +16,7 @@ function getSavingGoals(req, res, next) {
             res.send(savingGoals)
           }).catch(next)
     } else {
-      SavingGoal.find().then(savingGoals =>{
+      SavingGoal.find( { userID: req.user.id } ).then(savingGoals =>{
         res.send(savingGoals)
       }).catch(next)
     }

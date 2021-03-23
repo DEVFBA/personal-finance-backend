@@ -23,6 +23,7 @@ mongoose.set("debug", true);
 require("./models/User");
 require('./config/passport');
 require('./models/SavingGoal');
+require('./models/Investment');
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 

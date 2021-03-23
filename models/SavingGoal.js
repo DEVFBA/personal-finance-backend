@@ -14,7 +14,7 @@ const SavingGoalSchema = new mongoose.Schema({
         type: Number
     },
     targetDate: {
-        type:Date
+        type: Date
     }
     },
     { collection: "savingGoals", timestamps: true }
