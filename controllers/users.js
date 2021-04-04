@@ -51,7 +51,7 @@ function deleteUser(req, res) {
 
 function login(req, res, next) {
   if (!req.body.email) {
-    return res.status(422).json({ errors: { email: "no puede estar vacío" } });
+    return res.status(422).json({ errors: { email: "no puede estar vacío hola hola" } });
   }
 
   if (!req.body.password) {
