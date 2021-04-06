@@ -21,10 +21,10 @@ var isProduction = process.env.NODE_ENV === 'production';
 
 mongoose.connect(
   process.env.MONGODB_URI, // obtiene la url de conexión desde las variables de entorno
-  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true },
+  { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, socketTimeoutMS: 50000, connectTimeoutMS: 50000 },
   function (err, res) {
       try {
-          console.log('Connected to Database');
+          console.log('Connected to Database, sí se conecta');
       } catch (err) {
           throw err;
       }
