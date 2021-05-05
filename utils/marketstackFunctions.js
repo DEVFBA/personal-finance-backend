@@ -4,7 +4,7 @@ async function retrieveHomeEOD(){
 
     const token = process.env.MARKETSTACK_TOKEN;
 
-    const apiURL = `http://api.marketstack.com/v1/eod?access_key=${token}&symbols=AAPL,AMZN,TSLA,FB&limit=8`
+    const apiURL = `http://api.marketstack.com/v1/eod?access_key=${token}&symbols=AAPL,AMZN,TSLA,NVDA&limit=8`
 
     const response = await fetch(apiURL, {
         method: 'GET',
