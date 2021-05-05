@@ -56,6 +56,7 @@ require('./config/passport');
 require('./models/SavingGoal');
 require('./models/Investment');
 require('./models/Budget');
+require('./models/QuoteEOD');
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 

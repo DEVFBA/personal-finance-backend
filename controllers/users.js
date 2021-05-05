@@ -5,6 +5,7 @@ const passport = require('passport');
 
 function createUser(req, res, next) {
   // Instanciaremos un nuevo usuario utilizando la clase usuario
+
   const body = req.body,
     password = body.password
 
