@@ -5,7 +5,7 @@ const { retrieveLastEODInsertDate } = require('../utils/APIFunctions');
 
 async function getQuoteEODMarketStack(req, res, next){
 
-    console.log('Respuesta de Fecgha ', await retrieveLastEODInsertDate())
+    console.log('Respuesta de Fecha ', await retrieveLastEODInsertDate())
 
     //const lastInsertDate = new Date(await retrieveLastEODInsertDate());
     //const lastInsertDate = new Date(0);
@@ -30,7 +30,8 @@ async function getQuoteEODMarketStack(req, res, next){
 
         console.log('Debe recuperar datos de Marketstack');
 
-        QuoteEOD.deleteMany();
+        //QuoteEOD.deleteMany();
+        await deleteQuoteEOD();
 
         const marketstackData = await retrieveHomeEOD();
 
@@ -59,6 +60,16 @@ async function getQuoteEODMarketStack(req, res, next){
     //console.log('Data To Create ', dataToCreate);
 
     //await insertEOD(dataToCreate);
+
+}
+
+async function deleteQuoteEOD(req, res){
+
+    console.log('Entra a borrar');
+
+    QuoteEOD.deleteMany().then(r => {
+        res.status(200).send(`Quotes Deleted`);
+    });
 
 }
 
