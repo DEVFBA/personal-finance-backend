@@ -20,6 +20,16 @@ const QuoteEODSchema = new mongoose.Schema({                   //Definiendo el o
     { collection: "quotesEOD", timestamps: true }
 );
 
+QuoteEODSchema.index(
+  {
+    symbol: 1,
+    date: -1
+  },
+  {
+    unique:true
+  }
+)
+
 /**
 * Devuelve la representación de un Quote EOD, sólo datos públicos
 */

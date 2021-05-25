@@ -9,6 +9,8 @@ router.use('/savingGoals', require('./savingGoals'));
 router.use('/investments', require('./investments'));
 router.use('/budgets', require('./budgets'));
 router.use('/quotesEOD', require('./quotesEOD'));
+router.use('/incomes', require('./incomes'));
+router.use('/expenses', require('./expenses'));
 
 
 module.exports = router;

@@ -14,7 +14,10 @@ function createUser(req, res, next) {
   user.createPassword(password)
   user.save().then(user => {                                         //Guardando nuevo usuario en MongoDB.
     return res.status(201).json(user.toAuthJSON())
-  }).catch(next)
+  }).catch(() => {
+    res.status(500).json({message:"Ya existe"})
+    next()
+  })//Aquí estoy
 }
 
 function getUsers(req, res, next) {                              //Obteniendo usuario desde MongoDB.

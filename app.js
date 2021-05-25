@@ -57,6 +57,8 @@ require('./models/SavingGoal');
 require('./models/Investment');
 require('./models/Budget');
 require('./models/QuoteEOD');
+require('./models/Income');
+require('./models/Expense');
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 
