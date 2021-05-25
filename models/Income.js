@@ -14,7 +14,8 @@ const IncomeSchema = new mongoose.Schema({
     recurring: {
         type: Boolean
     }
-    }
+    },
+    { timestamps: true }
 );
 
 IncomeSchema.methods.publicData = function() {
@@ -23,7 +24,9 @@ IncomeSchema.methods.publicData = function() {
         userID: this.userID,
         concept: this.concept,
         incomeAmount: this.incomeAmount,
-        recurring: this.recurring
+        recurring: this.recurring,
+        createdAt: this.createdAt,
+        updatedAt: this.updatedAt
     };
 };
 

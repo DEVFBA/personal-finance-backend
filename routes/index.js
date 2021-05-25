@@ -11,6 +11,7 @@ router.use('/budgets', require('./budgets'));
 router.use('/quotesEOD', require('./quotesEOD'));
 router.use('/incomes', require('./incomes'));
 router.use('/expenses', require('./expenses'));
+router.use('/transactions', require('./transactions'));
 
 
 module.exports = router;

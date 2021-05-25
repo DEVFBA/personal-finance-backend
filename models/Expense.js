@@ -14,7 +14,8 @@ const ExpenseSchema = new mongoose.Schema({
     recurring: {
         type: Boolean
     }
-    }
+    },
+    { timestamps: true }
 );
 
 ExpenseSchema.methods.publicData = function() {
@@ -23,7 +24,9 @@ ExpenseSchema.methods.publicData = function() {
         userID: this.userID,
         concept: this.concept,
         expenseAmount: this.expenseAmount,
-        recurring: this.recurring
+        recurring: this.recurring,
+        createdAt: this.createdAt,
+        updatedAt: this.updatedAt
     };
 };
 

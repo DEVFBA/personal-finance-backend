@@ -13,10 +13,6 @@ app.use(bodyParser.json());
 /*********************** Mongoose Configuration *******************************/
 const mongoose = require("mongoose");
 
-/* mongoose.connect(
-    "mongodb+srv://admin:Admin2021@cluster0.wltje.mongodb.net/personal-finance?retryWrites=true&w=majority"
-); */
-
 var isProduction = process.env.NODE_ENV === 'production';
 
 mongoose.connect(
@@ -59,6 +55,7 @@ require('./models/Budget');
 require('./models/QuoteEOD');
 require('./models/Income');
 require('./models/Expense');
+require('./models/Transaction');
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 

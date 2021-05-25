@@ -27,7 +27,9 @@ InvestmentSchema.methods.publicData = function() {
         investingCompany: this.investingCompany,
         investingInstrument: this.investingInstrument,
         investedAmount: this.investedAmount,
-        total: this.total
+        total: this.total,
+        createdAt: this.createdAt,
+        updatedAt: this.updatedAt
     };
 };
 

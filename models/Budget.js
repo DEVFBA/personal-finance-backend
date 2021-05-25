@@ -23,7 +23,9 @@ BudgetSchema.methods.publicData = function() {
         userID: this.userID,
         concept: this.concept,
         budgetedAmount: this.budgetedAmount,
-        expendedAmount: this.expendedAmount
+        expendedAmount: this.expendedAmount,
+        createdAt: this.createdAt,
+        updatedAt: this.updatedAt
     };
 };
 
