@@ -34,6 +34,10 @@ function updateTransaction(req, res, next) {
   Transaction.findById({ _id: req.params.id }).then(transaction => {
     if (!transaction) { return res.sendStatus(401); }
     let newInfo = req.body
+    if (typeof newInfo.origin !== 'undefined')
+    transaction.origin = newInfo.origin
+    if (typeof newInfo.accountNumber !== 'undefined')
+    transaction.accountNumber = newInfo.accountNumber
     if (typeof newInfo.type !== 'undefined')
     transaction.type = newInfo.type
     if (typeof newInfo.concept !== 'undefined')
