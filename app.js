@@ -56,6 +56,7 @@ require('./models/QuoteEOD');
 require('./models/Income');
 require('./models/Expense');
 require('./models/Transaction');
+require('./models/BankTransaction');
 
 // Aquí se importarán los modelos Mascota y Solicitud cuando estén listos
 
