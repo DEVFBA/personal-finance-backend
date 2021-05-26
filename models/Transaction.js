@@ -30,6 +30,9 @@ const TransactionSchema = new mongoose.Schema({
     },
     date: {
         type: Date
+    },
+    bankTransId: {
+        type: mongoose.Schema.Types.ObjectId, ref: 'BankTransaction'
     }
     },
     { timestamps: true }
@@ -47,6 +50,7 @@ TransactionSchema.methods.publicData = function() {
         amount: this.amount,
         recurring: this.recurring,
         date: this.date,
+        bankTransId: this.bankTransId,
         createdAt: this.createdAt,
         updatedAt: this.updatedAt
     };
